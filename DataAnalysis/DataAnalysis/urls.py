@@ -1,0 +1,28 @@
+"""DataAnalysis URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/1.11/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.conf.urls import url, include
+    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+"""
+from django.conf.urls import *
+from django.contrib import admin
+from QQDataAnalysis import views
+from django.conf import settings
+urlpatterns = [
+    url(r'^admin/',admin.site.urls),
+    url(r'^word',views.getWord),
+    url(r'^name',views.getName),
+    url(r'^time',views.getTime),
+    url(r'^check',views.check),
+    url(r'^upload$', views.upload), #顺序很重要
+    url(r'^', views.index),
+]

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WordCloud</title>
+	<meta name = "viewport" content = "width=device-width,height = device-height,maximum-scale=1.0,minimum-device=1.0">
+	<link href = '../../static/css/style.css' rel="stylesheet" type = 'text/css'>
+	<script type="text/javascript" src = "../../static/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src = "../../static/js/echarts.min.js"></script>
+	<script type="text/javascript" src = "../../static/js/effect.js"></script>
+	<script type="text/javascript" src = "../../static/js/common.js"></script>
+    <script type="text/javascript" src = "../../static/js/statistics.js"></script>
+</head>
+<body>
+	<div id = 'main-wrapper'>
+		<header>
+			<div class = 'head'>
+				<div class = "nav-bar">
+                    <ul>
+                        <li id = "home" class = "nav-btn"><a href="index.html">Home</a></li>
+                        <li id = "more" class = "nav-btn"><a href = "index.html">More</a></li>
+                        <li id = "about-us" class = "nav-btn"><a href="index.html">About me</a></li>
+                    </ul>
+                </div>
+                <div id = "github-connect"></div>
+			</div>
+		</header>
+
+		<section id = 'section-left'>
+			<div class = 'float-left'>	
+			</div>
+		</section>
+
+		<section id = 'section-right'>
+			<div class = 'float-right'>
+				<div id = 'word-cloud'>
+					<div id = "arrow-container">
+						<div id = "pre" class = "arrow"></div>
+						<div id = "next" class = "arrow"></div>
+					</div>
+					<div id = "images-container">
+						<div id = "img-1" class = "img"></div>
+						<div id = "img-2" class = "img"></div>
+						<div id = "img-3" class = "img"></div>
+						<div id = "img-4" class = "img"></div>
+						<div id = "img-5" class = "img"></div>
+					</div>
+					<div id = "sectect-container">
+                        <p id = "message">{{ message }}</p>
+                        <div><a href = "http://192.168.43.79:8080/check"  id = "show" target = "_blank">查看</a></div>
+						<form  enctype="multipart/form-data" action="/upload" method="post" id = "upload">
+					        <input type = "file" name = "file" id = "select-file">
+					        <input type = "submit" value = "上传" id = "submit-btn">
+		    			</form>
+					</div>
+				</div>
+				
+				<div id = 'chart-1' class = 'chart' ></div>
+				<div id = 'chart-2' class = 'chart' ></div>
+				<div id = 'chart-3' class = 'chart' ></div>
+			</div>
+		</section>
+
+		<footer>
+			<div class = "foot">
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
