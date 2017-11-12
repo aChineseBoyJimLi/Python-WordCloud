@@ -1,0 +1,2 @@
+# Python-WordCloud
+使用了Python的Django框架搭建了一个简单的“网站”，使用WordCloud模块生成词云图，在前端使用echart这个js插件显示词频统计的结果
